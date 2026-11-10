@@ -27,13 +27,15 @@ export default async function ProjectDetail({
         ))}
       </div>
       <p className="mt-6 text-neutral-600">{project.description}</p>
-      <a
-        href={project.link}
-        target="_blank"
-        className="mt-8 inline-block rounded-full bg-black px-5 py-2.5 text-sm text-white hover:bg-neutral-800"
-      >
-        Kunjungi project ↗
-      </a>
+      {project.link && (
+        <a
+          href={project.link}
+          target="_blank"
+          className="mt-8 inline-block rounded-full bg-accent px-5 py-2.5 text-sm text-white hover:brightness-110"
+        >
+          Kunjungi project ↗
+        </a>
+      )}
     </article>
   );
 }
